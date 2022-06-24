@@ -5,7 +5,7 @@ public class Student {
 	//define attributes/fields = variables
 	String name, lastName, address;
 	int studentId, age;
-	char grade;
+	char grade;   
 	
 	//define behavior = methods
 	void study() {

@@ -11,3 +11,14 @@ returnType name () {
 Methods can have return type or have void
 
 Methods can have parameters or do not have them
+
+
+Review 8
+
+this keyword - use to refer to the current object
+
+this. - used with instance variable
+
+this() - used to call current class constructor
+
+
