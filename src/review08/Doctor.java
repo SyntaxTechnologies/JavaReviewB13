@@ -2,13 +2,14 @@ package review08;
 
 public class Doctor {
 	
-	String firstName, lastName, speciality;
+	public String firstName, lastName;
+	protected String speciality;
 	int experience;
-	double salary;
+	private double salary;
 	
-	static String hospital;
+	public static String hospital;
 	
-	Doctor(String firstName, String lastName){
+	public Doctor(String firstName, String lastName){
 		this.firstName=firstName;
 		this.lastName=lastName;
 	}
@@ -19,13 +20,30 @@ public class Doctor {
 		this.experience=experience;
 	}
 	
-	void printInfo() {
+	public void printInfo() {
 		System.out.println("Doctor name is "+firstName+" "+lastName
 				+" and speciality is "+speciality);
 	}
 	
-	void work() {
+	//instance accessing both static and instance
+	protected void work() {
 		System.out.println("Doctor "+lastName+" works at "+hospital);
+	}
+	
+	void treat(String patientName) {
+		this.printInfo();
+		System.out.println(" Treats patient "+patientName);
+	}
+	
+	private void getPaid() {
+		System.out.println("Doctor "+lastName+" gets paid "+salary);
+	}
+	
+	//static methods can work only with static variables and methods
+	public static void study(String university) {
+		//printInfo(); CE: Cannot make a static reference to the non-static method
+		System.out.println("Doctor studied at "+university
+				+ " and now works at "+hospital);
 	}
 
 }

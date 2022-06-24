@@ -30,5 +30,11 @@ public class Hospital {
 		doc.work();
 		doctor.work();
 		
+		System.out.println("                               ");
+		doctor.treat("Samantha");
+		
+		//accessing static method
+		Doctor.study("GTU");
+		
 	}
 }
